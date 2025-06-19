@@ -1,118 +1,98 @@
 
-import React, { useState } from 'react';
-import { ExternalLink } from 'lucide-react';
+import React from 'react';
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
-
   const projects = [
     {
       id: 1,
-      title: 'Modern Living Room',
-      category: 'residential',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80',
-      description: 'Contemporary living space with minimalist design'
+      title: 'Serene Sanctuary',
+      subtitle: 'Private Residence',
+      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80',
+      year: '2024'
     },
     {
       id: 2,
-      title: 'Corporate Office',
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80',
-      description: 'Modern office space promoting productivity'
+      title: 'Urban Elegance',
+      subtitle: 'Luxury Apartment',
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80',
+      year: '2024'
     },
     {
       id: 3,
-      title: 'Luxury Bedroom',
-      category: 'residential',
-      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&q=80',
-      description: 'Elegant bedroom with premium finishes'
+      title: 'Timeless Classic',
+      subtitle: 'Heritage Home',
+      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80',
+      year: '2023'
     },
     {
       id: 4,
-      title: 'Restaurant Interior',
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80',
-      description: 'Warm and inviting restaurant atmosphere'
-    },
-    {
-      id: 5,
-      title: 'Modern Kitchen',
-      category: 'residential',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80',
-      description: 'Functional kitchen with contemporary design'
-    },
-    {
-      id: 6,
-      title: 'Retail Showroom',
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80',
-      description: 'Sophisticated retail space design'
+      title: 'Modern Minimalism',
+      subtitle: 'Contemporary Villa',
+      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80',
+      year: '2023'
     }
   ];
 
-  const filters = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'residential', label: 'Residential' },
-    { id: 'commercial', label: 'Commercial' }
-  ];
-
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
-
   return (
-    <section id="portfolio" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="text-navy-600 font-semibold text-lg">Our Portfolio</span>
-          <h2 className="text-4xl font-bold text-navy-900 mt-2 mb-6">
-            Recent Projects
+    <section id="portfolio" className="py-32 bg-gray-50">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-bold text-navy-900 mb-6 tracking-wide">
+            Portfolio
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Explore our collection of completed projects showcasing our expertise in creating beautiful and functional spaces.
+          <div className="w-24 h-1 bg-navy-800 mx-auto mb-8"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Each project is a unique journey, a story of transformation where vision meets reality. 
+            Discover spaces that inspire and endure.
           </p>
-
-          {/* Filter buttons */}
-          <div className="flex justify-center space-x-4 mb-12">
-            {filters.map((filter) => (
-              <button
-                key={filter.id}
-                onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-colors ${
-                  activeFilter === filter.id
-                    ? 'bg-navy-800 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {filter.label}
-              </button>
-            ))}
-          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+        {/* Portfolio Grid */}
+        <div className="grid lg:grid-cols-2 gap-16">
+          {projects.map((project, index) => (
+            <div 
+              key={project.id} 
+              className="group cursor-pointer"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-200 mb-4">{project.description}</p>
-                  <button className="flex items-center space-x-2 text-white hover:text-navy-300 transition-colors">
-                    <span>View Details</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </button>
+              <div className="relative overflow-hidden mb-8">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/20 transition-all duration-500"></div>
+                
+                {/* Project Year */}
+                <div className="absolute top-6 right-6 text-white bg-navy-900/50 px-4 py-2 text-sm font-medium tracking-wide">
+                  {project.year}
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-navy-900 tracking-wide group-hover:text-navy-700 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-lg text-gray-600 font-light">
+                  {project.subtitle}
+                </p>
+                
+                {/* View Project Link */}
+                <div className="pt-4">
+                  <span className="text-navy-800 font-medium tracking-wide group-hover:text-navy-600 transition-colors cursor-pointer">
+                    View Project →
+                  </span>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View All Projects */}
+        <div className="text-center mt-20">
+          <button className="border-2 border-navy-800 text-navy-800 px-12 py-4 font-medium tracking-wide hover:bg-navy-800 hover:text-white transition-all duration-300">
+            View All Projects
+          </button>
         </div>
       </div>
     </section>

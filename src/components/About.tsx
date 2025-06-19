@@ -1,75 +1,96 @@
 
 import React from 'react';
-import { CheckCircle, Lightbulb, Palette, Ruler } from 'lucide-react';
 
 const About = () => {
-  const features = [
-    {
-      icon: Lightbulb,
-      title: 'Innovative Designs',
-      description: 'Creative solutions that push the boundaries of traditional design'
-    },
-    {
-      icon: Palette,
-      title: 'Personalized Approach',
-      description: 'Every project is tailored to reflect your unique style and needs'
-    },
-    {
-      icon: Ruler,
-      title: 'Precision Planning',
-      description: 'Meticulous attention to detail from concept to completion'
-    }
-  ];
-
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80"
-              alt="About Our Studio"
-              className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
-            />
+    <section id="about" className="py-32 bg-gray-50">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <div className="inline-block">
+            <h2 className="text-5xl lg:text-6xl font-bold text-navy-900 mb-6 tracking-wide">
+              Our Story
+            </h2>
+            <div className="w-24 h-1 bg-navy-800 mx-auto mb-8"></div>
+          </div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Every space tells a story. We believe in crafting narratives through design, 
+            where each element speaks to the soul and every detail matters.
+          </p>
+        </div>
+
+        {/* Main Content */}
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          {/* Image Side */}
+          <div className="relative">
+            <div className="relative z-10">
+              <img
+                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
+                alt="Our Design Philosophy"
+                className="w-full h-[600px] object-cover shadow-2xl"
+              />
+            </div>
+            <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-navy-200 -z-10"></div>
           </div>
 
-          <div>
-            <div className="mb-6">
-              <span className="text-navy-600 font-semibold text-lg">About Us</span>
-              <h2 className="text-4xl font-bold text-navy-900 mt-2 mb-6">
-                Creating Spaces That Inspire
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                With over a decade of experience in interior design and architecture, we specialize in creating spaces that seamlessly blend functionality with aesthetic appeal. Our team of expert designers and architects work closely with clients to bring their vision to life.
+          {/* Content Side */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-3xl font-bold text-navy-900 mb-6 tracking-wide">
+                Interior Design & Vastu Harmony
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                At SpaceCoutureByNupur, we believe that beautiful spaces should also nurture positive energy. 
+                Our unique approach combines contemporary interior design with ancient Vastu principles, 
+                creating homes and offices that are both aesthetically stunning and energetically balanced.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Led by Nupur, our design philosophy centers on creating spaces that reflect your personality 
+                while promoting harmony, prosperity, and well-being. Every project is a thoughtful blend of 
+                modern design sensibilities and time-tested Vastu wisdom.
               </p>
             </div>
 
-            <div className="grid gap-6 mb-8">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center">
-                    <feature.icon className="w-6 h-6 text-navy-800" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-navy-900 mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            {/* Philosophy Points */}
+            <div className="space-y-6">
+              <div className="border-l-4 border-navy-800 pl-6">
+                <h4 className="text-xl font-semibold text-navy-900 mb-2">Design Excellence</h4>
+                <p className="text-gray-600">
+                  Every element is thoughtfully selected to create spaces that are both 
+                  visually stunning and functionally perfect for modern living.
+                </p>
+              </div>
+              
+              <div className="border-l-4 border-navy-800 pl-6">
+                <h4 className="text-xl font-semibold text-navy-900 mb-2">Vastu Wisdom</h4>
+                <p className="text-gray-600">
+                  We integrate ancient Vastu principles to ensure your space promotes 
+                  positive energy, prosperity, and overall well-being.
+                </p>
+              </div>
+              
+              <div className="border-l-4 border-navy-800 pl-6">
+                <h4 className="text-xl font-semibold text-navy-900 mb-2">Personalized Approach</h4>
+                <p className="text-gray-600">
+                  Each project reflects your unique style and needs, creating spaces that 
+                  truly feel like home while supporting your lifestyle goals.
+                </p>
+              </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-8">
-              <div>
-                <div className="text-3xl font-bold text-navy-900 mb-2">500+</div>
-                <div className="text-gray-600">Happy Clients</div>
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-navy-900 mb-2">15+</div>
+                <div className="text-sm text-gray-600 tracking-wide">Years of Excellence</div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-navy-900 mb-2">15+</div>
-                <div className="text-gray-600">Awards Won</div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-navy-900 mb-2">200+</div>
+                <div className="text-sm text-gray-600 tracking-wide">Curated Spaces</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-navy-900 mb-2">98%</div>
+                <div className="text-sm text-gray-600 tracking-wide">Client Satisfaction</div>
               </div>
             </div>
           </div>

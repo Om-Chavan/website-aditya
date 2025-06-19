@@ -1,85 +1,101 @@
 
 import React from 'react';
-import { Home, Building2, Paintbrush, Sofa, Lamp, TreePine } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
 
 const Services = () => {
   const services = [
     {
-      icon: Home,
-      title: 'Residential Design',
-      description: 'Complete home interior design solutions for apartments, villas, and independent houses.',
-      features: ['Space Planning', 'Furniture Selection', 'Color Schemes', 'Lighting Design']
+      title: 'Residential Interior Design',
+      description: 'Transform your home into a harmonious sanctuary with our personalized design solutions that blend aesthetics with Vastu principles.',
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80'
     },
     {
-      icon: Building2,
-      title: 'Commercial Design',
-      description: 'Professional office spaces, retail stores, restaurants, and hospitality interiors.',
-      features: ['Office Layouts', 'Brand Integration', 'Functional Spaces', 'Modern Aesthetics']
+      title: 'Vastu Consultancy',
+      description: 'Optimize the energy flow in your space with expert Vastu guidance to promote prosperity, health, and happiness.',
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80'
     },
     {
-      icon: Paintbrush,
-      title: 'Renovation & Remodeling',
-      description: 'Transform existing spaces with our expert renovation and remodeling services.',
-      features: ['Space Optimization', 'Modern Updates', 'Structural Changes', 'Style Transformation']
+      title: 'Commercial Interior Design',
+      description: 'Create productive and positive work environments that enhance business success through thoughtful design and Vastu compliance.',
+      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=600&q=80'
     },
     {
-      icon: Sofa,
-      title: 'Furniture Design',
-      description: 'Custom furniture design and selection to perfectly complement your space.',
-      features: ['Custom Pieces', 'Material Selection', 'Ergonomic Design', 'Quality Craftsmanship']
-    },
-    {
-      icon: Lamp,
-      title: 'Lighting Solutions',
-      description: 'Comprehensive lighting design to enhance ambiance and functionality.',
-      features: ['Ambient Lighting', 'Task Lighting', 'Decorative Elements', 'Smart Controls']
-    },
-    {
-      icon: TreePine,
-      title: 'Landscape Design',
-      description: 'Beautiful outdoor spaces including gardens, terraces, and balcony designs.',
-      features: ['Garden Planning', 'Plant Selection', 'Outdoor Furniture', 'Water Features']
+      title: 'Space Planning & Layout',
+      description: 'Maximize your space potential with strategic planning that combines functional design with Vastu-compliant layouts.',
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80'
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="text-navy-600 font-semibold text-lg">Our Services</span>
-          <h2 className="text-4xl font-bold text-navy-900 mt-2 mb-6">
-            Comprehensive Design Solutions
+    <section id="services" className="py-32 bg-white">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-bold text-navy-900 mb-6 tracking-wide">
+            Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From concept to completion, we offer a full range of interior design and architectural services to meet all your needs.
+          <div className="w-24 h-1 bg-navy-800 mx-auto mb-8"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We offer comprehensive interior design and Vastu consultancy services, creating 
+            spaces that are beautiful, functional, and energetically balanced.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Services Grid */}
+        <div className="grid lg:grid-cols-2 gap-16">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-              <CardContent className="p-8">
-                <div className="flex items-center justify-center w-16 h-16 bg-navy-100 rounded-xl mb-6 group-hover:bg-navy-600 transition-colors">
-                  <service.icon className="w-8 h-8 text-navy-800 group-hover:text-white transition-colors" />
+            <div 
+              key={index} 
+              className="group cursor-pointer"
+            >
+              <div className="relative overflow-hidden mb-8">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-navy-900/20 group-hover:bg-navy-900/40 transition-all duration-500"></div>
+                
+                {/* Service Number */}
+                <div className="absolute top-6 left-6 text-white">
+                  <span className="text-6xl font-light opacity-60">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                 </div>
-                <h3 className="text-2xl font-bold text-navy-900 mb-4">
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-3xl font-bold text-navy-900 tracking-wide group-hover:text-navy-700 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-lg text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-navy-600 rounded-full"></div>
-                      <span className="text-gray-700 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+                
+                {/* Learn More Link */}
+                <div className="pt-4">
+                  <span className="text-navy-800 font-medium tracking-wide group-hover:text-navy-600 transition-colors cursor-pointer">
+                    Learn More →
+                  </span>
+                </div>
+              </div>
+            </div>
           ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-20">
+          <div className="inline-block p-12 bg-gray-50">
+            <h3 className="text-3xl font-bold text-navy-900 mb-6 tracking-wide">
+              Ready to Begin Your Journey?
+            </h3>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can transform your space into something extraordinary. 
+              Every great design begins with a conversation.
+            </p>
+            <button className="bg-navy-800 text-white px-12 py-4 font-medium tracking-wide hover:bg-navy-900 transition-colors">
+              Start Your Project
+            </button>
+          </div>
         </div>
       </div>
     </section>
