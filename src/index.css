@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 213 94% 68%;
+    --primary: 220 91% 15%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -37,9 +37,9 @@
 
     --radius: 0.5rem;
 
-    --navy: 213 94% 68%;
-    --navy-dark: 220 91% 15%;
-    --navy-light: 213 94% 85%;
+    --navy: 220 91% 15%;
+    --navy-dark: 220 98% 8%;
+    --navy-light: 220 91% 25%;
   }
 
   .dark {
@@ -100,5 +100,5 @@
 }
 
 .gradient-navy {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
