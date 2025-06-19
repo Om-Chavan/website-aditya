@@ -27,10 +27,11 @@ const About = () => {
               <img
                 src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
                 alt="Our Design Philosophy"
-                className="w-full h-[600px] object-cover shadow-2xl"
+                className="w-full h-[600px] object-cover shadow-2xl rounded-3xl transition-transform duration-500 hover:scale-105"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/20 to-transparent rounded-3xl"></div>
             </div>
-            <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-navy-200 -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-navy-200 rounded-3xl -z-10"></div>
           </div>
 
           {/* Content Side */}

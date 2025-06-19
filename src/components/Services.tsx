@@ -47,13 +47,14 @@ const Services = () => {
               key={index} 
               className="group cursor-pointer"
             >
-              <div className="relative overflow-hidden mb-8">
+              <div className="relative overflow-hidden mb-8 rounded-2xl">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110 rounded-2xl"
                 />
-                <div className="absolute inset-0 bg-navy-900/20 group-hover:bg-navy-900/40 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-navy-900/20 group-hover:bg-navy-900/40 transition-all duration-500 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent rounded-2xl"></div>
                 
                 {/* Service Number */}
                 <div className="absolute top-6 left-6 text-white">
@@ -84,7 +85,7 @@ const Services = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <div className="inline-block p-12 bg-gray-50">
+          <div className="inline-block p-12 bg-gray-50 rounded-3xl shadow-lg">
             <h3 className="text-3xl font-bold text-navy-900 mb-6 tracking-wide">
               Ready to Begin Your Journey?
             </h3>
@@ -92,7 +93,7 @@ const Services = () => {
               Let's discuss how we can transform your space into something extraordinary. 
               Every great design begins with a conversation.
             </p>
-            <button className="bg-navy-800 text-white px-12 py-4 font-medium tracking-wide hover:bg-navy-900 transition-colors">
+            <button className="bg-navy-800 text-white px-12 py-4 font-medium tracking-wide hover:bg-navy-900 transition-colors rounded-full">
               Start Your Project
             </button>
           </div>

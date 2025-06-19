@@ -33,7 +33,7 @@ const Contact = () => {
             {/* Contact Details */}
             <div className="space-y-8">
               <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0 w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -47,7 +47,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0 w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -59,7 +59,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0 w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -83,7 +83,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white/5 backdrop-blur-sm p-12 rounded-lg">
+          <div className="bg-white/5 backdrop-blur-sm p-12 rounded-3xl shadow-xl">
             <h3 className="text-3xl font-bold mb-8 tracking-wide">
               Start Your Journey
             </h3>
@@ -96,7 +96,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-white/40 focus:bg-white/15 outline-none transition-all"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-white/40 focus:bg-white/15 outline-none transition-all"
                     placeholder="Your first name"
                   />
                 </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-white/40 focus:bg-white/15 outline-none transition-all"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-white/40 focus:bg-white/15 outline-none transition-all"
                     placeholder="Your last name"
                   />
                 </div>
@@ -118,7 +118,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-white/40 focus:bg-white/15 outline-none transition-all"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-white/40 focus:bg-white/15 outline-none transition-all"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -129,7 +129,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="tel"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-white/40 focus:bg-white/15 outline-none transition-all"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-white/40 focus:bg-white/15 outline-none transition-all"
                   placeholder="+91 93157 48516"
                 />
               </div>
@@ -138,7 +138,7 @@ const Contact = () => {
                 <label className="block text-sm font-medium text-white/80 mb-2">
                   Project Type
                 </label>
-                <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-white/40 focus:bg-white/15 outline-none transition-all">
+                <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:border-white/40 focus:bg-white/15 outline-none transition-all">
                   <option value="" className="bg-navy-900">Select project type</option>
                   <option value="residential" className="bg-navy-900">Residential Interior Design</option>
                   <option value="commercial" className="bg-navy-900">Commercial Interior Design</option>
@@ -154,14 +154,14 @@ const Contact = () => {
                 </label>
                 <textarea
                   rows={5}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-white/40 focus:bg-white/15 outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:border-white/40 focus:bg-white/15 outline-none transition-all resize-none"
                   placeholder="Share your ideas, inspirations, and project requirements..."
                 ></textarea>
               </div>
 
               <button 
                 type="submit"
-                className="w-full bg-white text-navy-900 py-4 font-medium tracking-wide hover:bg-white/90 transition-colors"
+                className="w-full bg-white text-navy-900 py-4 font-medium tracking-wide hover:bg-white/90 transition-colors rounded-xl"
               >
                 Send Message
               </button>

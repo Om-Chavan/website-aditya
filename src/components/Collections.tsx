@@ -51,17 +51,18 @@ const Collections = () => {
             >
               {/* Image */}
               <div className={`relative group ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden rounded-3xl shadow-xl">
                   <img
                     src={collection.image}
                     alt={collection.title}
-                    className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105 rounded-3xl"
                   />
-                  <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/10 transition-all duration-500"></div>
+                  <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/10 transition-all duration-500 rounded-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/30 via-transparent to-transparent rounded-3xl"></div>
                 </div>
                 
                 {/* Collection Items Count */}
-                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 text-navy-900 font-medium">
+                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 text-navy-900 font-medium rounded-full">
                   {collection.items}
                 </div>
               </div>
@@ -95,7 +96,7 @@ const Collections = () => {
 
                 {/* CTA */}
                 <div className="pt-8">
-                  <button className="border-2 border-navy-800 text-navy-800 px-8 py-3 font-medium tracking-wide hover:bg-navy-800 hover:text-white transition-all duration-300">
+                  <button className="border-2 border-navy-800 text-navy-800 px-8 py-3 font-medium tracking-wide hover:bg-navy-800 hover:text-white transition-all duration-300 rounded-full">
                     Explore Collection
                   </button>
                 </div>
@@ -106,7 +107,7 @@ const Collections = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-32">
-          <div className="inline-block p-16 bg-navy-50">
+          <div className="inline-block p-16 bg-navy-50 rounded-3xl shadow-lg">
             <h3 className="text-3xl font-bold text-navy-900 mb-6 tracking-wide">
               Create Your Custom Collection
             </h3>
@@ -114,7 +115,7 @@ const Collections = () => {
               Work with our artisans to create bespoke pieces that reflect your unique vision 
               and complement your lifestyle perfectly.
             </p>
-            <button className="bg-navy-800 text-white px-12 py-4 font-medium tracking-wide hover:bg-navy-900 transition-colors">
+            <button className="bg-navy-800 text-white px-12 py-4 font-medium tracking-wide hover:bg-navy-900 transition-colors rounded-full">
               Start Custom Design
             </button>
           </div>

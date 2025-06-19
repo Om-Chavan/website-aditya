@@ -55,16 +55,17 @@ const Portfolio = () => {
               key={project.id} 
               className="group cursor-pointer"
             >
-              <div className="relative overflow-hidden mb-8">
+              <div className="relative overflow-hidden mb-8 rounded-2xl shadow-lg">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-96 object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl"
                 />
-                <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/20 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/20 transition-all duration-500 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 via-transparent to-transparent rounded-2xl"></div>
                 
                 {/* Project Year */}
-                <div className="absolute top-6 right-6 text-white bg-navy-900/50 px-4 py-2 text-sm font-medium tracking-wide">
+                <div className="absolute top-6 right-6 text-white bg-navy-900/70 backdrop-blur-sm px-4 py-2 text-sm font-medium tracking-wide rounded-full">
                   {project.year}
                 </div>
               </div>
@@ -90,7 +91,7 @@ const Portfolio = () => {
 
         {/* View All Projects */}
         <div className="text-center mt-20">
-          <button className="border-2 border-navy-800 text-navy-800 px-12 py-4 font-medium tracking-wide hover:bg-navy-800 hover:text-white transition-all duration-300">
+          <button className="border-2 border-navy-800 text-navy-800 px-12 py-4 font-medium tracking-wide hover:bg-navy-800 hover:text-white transition-all duration-300 rounded-full">
             View All Projects
           </button>
         </div>
